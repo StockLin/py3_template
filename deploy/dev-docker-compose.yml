@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+    app:
+        image: py3-template:latest
+        env_file: 
+            - .dev.env
+        container_name: py3-template-serivce
+        restart: always
+        # extra_hosts: 
+        #     - "hostname:0.0.0.0"
+        # ports: 
+        #     - "80:80"
+        # volumes: 
+        #     - mnt_vol: /app/source
+        #     - hostv:containerv
+
+
+### window share folder mount 
+# volumes: 
+#     mnt_vol:
+#         driver: local
+#         driver_opts:
+#             type: cifs
+#             o: username=user1,password=mypass123,rw
+#             device: "//10.80.1.2/ShareFolder"
